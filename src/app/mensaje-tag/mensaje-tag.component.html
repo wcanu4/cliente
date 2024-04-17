@@ -1,0 +1,27 @@
+<div>
+    <h2>Obtener mensajes por etiqueta</h2>
+    <form (ngSubmit)="obtenerMensajes()">
+      <div>
+        <label for="tag">Etiqueta:</label>
+        <input id="tag" [(ngModel)]="tag" name="tag" required />
+      </div>
+      <button type="submit">Obtener mensajes</button>
+    </form>
+    
+    <!-- Mostrar mensajes -->
+    <div *ngIf="messages.length > 0" class="mensaje-container">
+      <h3>Mensajes recibidos:</h3>
+      <ul>
+        <li *ngFor="let message of messages">
+          <p><strong>Mensaje:</strong> {{ message.msg }}</p>
+          <p><strong>Tags:</strong> {{ message.tags.join(', ') }}</p>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Mostrar mensaje de error -->
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

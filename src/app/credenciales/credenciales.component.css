@@ -1,0 +1,38 @@
+div {
+    text-align: center; /* Centra los elementos */
+}
+/* Estilos para el formulario */
+form {
+    display: inline-block; /* Hace que el formulario sea un elemento en línea */
+    width: 300px; /* Ancho del formulario */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+/* Estilos para los campos de entrada */
+input {
+    width: calc(100% - 10px); /* Ancho del campo de entrada */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado inferior entre campos */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para los botones */
+button {
+    width: 100%; /* Ancho del botón */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+}
+/* Estilo para el título */
+h2 {
+    color: #333;
+    font-size: 28px; /* Tamaño de fuente más grande */
+    margin-bottom: 20px; /* Espaciado inferior */
+}

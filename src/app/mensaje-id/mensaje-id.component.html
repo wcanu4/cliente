@@ -1,0 +1,22 @@
+<div>
+    <h2>Obtener mensaje por ID</h2>
+    <form (ngSubmit)="obtenerMensaje()">
+        <div>
+            <label for="messageId">ID del mensaje:</label>
+            <input id="messageId" [(ngModel)]="messageId" name="messageId" required />
+        </div>
+        <button type="submit">Obtener mensaje</button>
+    </form>
+
+    <!-- Mostrar el mensaje -->
+    <div *ngIf="message" class="mensaje-container">
+        <h3>Mensaje recibido:</h3>
+        <p><strong>msg:</strong>{{ message.msg }}</p>
+        <p><strong>Tags:</strong> {{ message.tags.join(', ') }}</p>
+    </div>
+    
+    <!-- Mostrar mensaje de error -->
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+    </div>
+</div>

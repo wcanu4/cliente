@@ -1,0 +1,24 @@
+<div>
+    <h2>Enviar Credenciales</h2>
+    <form (submit)="enviarDatos()">
+      <div>
+        <label for="key">Key:</label>
+        <input id="key" [(ngModel)]="key" name="key" required />
+      </div>
+      <div>
+        <label for="sharedSecret">Shared Secret:</label>
+        <input id="sharedSecret" [(ngModel)]="sharedSecret" name="sharedSecret" required />
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    
+    <!-- Mostrar mensaje de éxito -->
+    <div *ngIf="successMessage" class="alert alert-success" role="alert">
+        {{ successMessage }}
+    </div>
+
+    <!-- Mostrar mensaje de error -->
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+    </div>
+</div>
